@@ -16,10 +16,10 @@
     },
     "autoload": {
         "psr-0": {
-            "eNotasGW\\": "src/"
+            "eNotasGW\\Api": "src/"
         },
         "psr-4": {
-            "eNotasGW\\": "src/"
+            "eNotasGW\\Api": "src/"
         }
     }
 }
