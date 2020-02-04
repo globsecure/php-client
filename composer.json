@@ -16,10 +16,12 @@
     },
     "autoload": {
         "psr-0": {
-            "eNotasGW\\Api": "src/"
+            "eNotasGW\\Api\\": "src/"
         },
         "psr-4": {
-            "eNotasGW\\Api": "src/"
-        }
+            "eNotasGW\\Api\\": "src/"
+        },
+        "classmap": ["src/"],
+        "files": ["src/eNotasGW.php"]
     }
 }
