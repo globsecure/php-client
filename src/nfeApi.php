@@ -136,6 +136,31 @@
 				)
 			));
 		}
+
+		/**
+		 * Consulta notas fiscais emitidas com status
+		 *
+		 * @param string $idEmpresa id da empresa para a qual a nota será emitida
+		 * @param int $pageNumber numero da página no qual a pesquisa será feita
+		 * @param int $pageSize quantidade de registros por página
+		 * @param string $status data inicial para pesquisa
+		 * @return searchResult	$listaNFe retorna uma lista contendo os registros encontrados na pesquisa
+		 */
+		public function consultarPorStatus($idEmpresa, $pageNumber, $pageSize, $status) {
+			return $this->callOperation(array(
+				'path' => '/empresas/{empresaId}/nfes',
+				'parameters' => array(
+					'path' => array(
+						'empresaId' => $idEmpresa
+					),
+					'query' => array(
+						'pageNumber' => $pageNumber,
+						'pageSize' => $pageSize,
+						'filter' => "status eq '{$status}'"
+					)
+				)
+			));
+		}
 		
 		/**
 		* Download do xml de uma Nota Fiscal identificada pelo seu Identificador Único
